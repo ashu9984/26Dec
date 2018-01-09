@@ -16,7 +16,7 @@ export class LoginComponent {
         this.header = new Headers;
     }
     login() {
-        this.http.post('http://localhost:8000/login', {email:this.user.email, password:this.user.password}, { headers: this.header }).subscribe(data => {
+        this.http.post('http://localhost:8000/login', {email:this.user.email, password:this.user.password,token:this.user.token}, { headers: this.header }).subscribe(data => {
             let response = data.json();
             console.log(response);
         }, err => {

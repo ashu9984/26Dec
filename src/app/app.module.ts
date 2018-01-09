@@ -8,9 +8,12 @@ import { LoginComponent } from './login.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import{HeaderComponent} from'./header.component';
+import{FooterComponent} from'./footer.component';
+
 @NgModule({
   declarations: [
-    AppComponent, LoginComponent,RegistrationComponent,
+    AppComponent, LoginComponent,RegistrationComponent,HeaderComponent,FooterComponent
   ],
   imports: [
     HttpModule,

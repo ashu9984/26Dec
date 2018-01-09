@@ -22,12 +22,14 @@ export class RegistrationComponent{
         this.http.post('http://localhost:8000/registration', {email:this.user.email, password:this.user.password, otp: this.user.otp}, {headers:this.header}).subscribe(data=>{
             let response = data.json();
             console.log(response);
+            alert(response.msg)
         }, err=>{
             let error = err.json();
             console.log("Error: ", error);
-       
+       alert(err.msg)
         })
     }
+ 
    
 
 }
