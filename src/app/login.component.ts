@@ -10,15 +10,16 @@ export class LoginComponent {
     user={
         email:'',
         password:"",
-        token:""
+        
     }
     constructor(private http: Http) {
         this.header = new Headers;
     }
     login() {
-        this.http.post('http://localhost:8000/login', {email:this.user.email, password:this.user.password,token:this.user.token}, { headers: this.header }).subscribe(data => {
+        this.http.post('http://localhost:8000/login', {email:this.user.email, password:this.user.password}, { headers: this.header }).subscribe(data => {
             let response = data.json();
             console.log(response);
+            alert(response.message)
         }, err => {
             let error = err.json();
             console.log("Error: ", error)

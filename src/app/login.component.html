@@ -1,16 +1,15 @@
 <div class="container">
-  <form >
+  <form>
     <div class="row">
-      <div class="col-sm-6 col-sm-offset-3">
+      <div class="col-sm-6 col-sm-offset-0">
         <div class="form-group">
+          <br>
           <label>Email</label>
-          <input name="email" class="form-control" [(ngModel)]="user.email" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" autofocus placeholder="Enter email" required
-          >
-        
-        </div>
-        <div *ngIf="! ng-invalid,ng-touched">
+          <input name="email" class="form-control" [(ngModel)]="user.email" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+            autofocus placeholder="Enter email" required>
 
         </div>
+
 
 
         <div class="form-group">
@@ -22,9 +21,8 @@
 
         </div>
 
-
-        <button type="submit" class="btn btn-primary"  value="" (click)="login()"
-          mdbRippleRadius>Login</button>
+        <br>
+        <button type="reset" class="btn btn-primary" (click)="login()" mdbRippleRadius>Login</button>
         <input type="reset" class="btn btn-primary" value="Reset">
 
 

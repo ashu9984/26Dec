@@ -1,4 +1,12 @@
-input.ng-invalid.ng-touched{
-    border:1px solid red;
-}
+.ng-valid[required], .ng-valid.required,.ng -untouched.required  {
+    border-left: 10px solid  green 
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 10px solid red
+  }
 
+  
+.help-block{
+    color: red;
+}
